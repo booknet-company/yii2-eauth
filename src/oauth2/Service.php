@@ -191,6 +191,8 @@ abstract class Service extends ServiceBase implements IAuthService
 			$url = Url::to($route, true);
 		}
 
+		$url = Url::to(['/auth/login', 'service' => $_GET['service']], true);
+
 		return $url;
 	}
 
